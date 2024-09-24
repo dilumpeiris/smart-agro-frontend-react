@@ -1,0 +1,40 @@
+.garden-body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+}
+
+.garden-item {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.garden-item-image {
+  padding-left: 20px;
+  flex: 1;
+  text-align: left;
+}
+
+.garden-item-quantity {
+  flex: 1;
+  text-align: left;
+}
+
+.garden-item-desc {
+  flex: 4;
+  text-align: left;
+}
+
+.garden-item-moisture {
+  flex: 1;
+  padding-right: 20px;
+  text-align: right;
+}

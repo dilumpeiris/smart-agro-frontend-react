@@ -1,0 +1,29 @@
+.component {
+    display: none;
+
+}
+
+.component.active {
+    display: block;
+    height: 100%;
+
+}
+
+.garden-header {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    color: aliceblue;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    padding: 20px;
+    background-color: gray;
+}
+
+.icon {
+    font-size: 3vh;
+
+}
+

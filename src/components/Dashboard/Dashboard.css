@@ -1,0 +1,34 @@
+.component {
+    display: none;
+
+}
+
+.component.active {
+    display: block;
+    height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
+    /* Full viewport height */
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+}
+
+.grid-item.wide {
+    grid-column: span 2;
+    /* Spans across two columns */
+}
