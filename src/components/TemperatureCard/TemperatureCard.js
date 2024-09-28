@@ -6,9 +6,9 @@ import { database } from "./firebaseConfig";
 import { ref, onValue } from "firebase/database";
 
 
-function TemperatureCard() {
+function TemperatureCard({ icon, value, sup_sign, desc, number_of_sensors, next_value }) {
 
-    const [weatherData, setWeatherData] = useState({ temp: "Loading...", condition: "..." });
+    const [weatherData, setWeatherData] = useState({ temp: "...", condition: "..." });
 
     useEffect(() => {
         const weatherRef = ref(database, "weatherData");
@@ -27,19 +27,19 @@ function TemperatureCard() {
         <div className="widget-container">
             <div className="weather-icon">
                 <span role="img" aria-label="storm">
-                    ⛈️
+                    {icon}
                 </span>
             </div>
             <div className="temp">
                 <div className='temp-value'>
-                    <h1>{weatherData.temp}</h1>
-                    <span><sup>&deg;C</sup></span>
+                    <h1>{value}</h1>
+                    <span><sup>{sup_sign}</sup></span>
                 </div>
-                <p>Average Temperature</p>
+                <p>{desc}</p>
             </div>
             <div className="location">
-                <p>Gathered from 2 sensors</p>
-                <p>Next Hour : 29&deg;C</p>
+                <p>Gathered from {number_of_sensors} sensors</p>
+                <p>Next Hour : {next_value}{sup_sign}</p>
             </div>
         </div>
     );
